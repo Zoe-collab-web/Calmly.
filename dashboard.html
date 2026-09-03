@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Calmly</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+        <div class="div1">
+            Calmly<span>.</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="breathing.html">Breathe</a>
+            <a href="journal.html">Journal</a>
+        </nav>
+
+        <div class="dashboard-actions">
+
+            <button id="logoutButton" class="logout">
+                Log out
+            </button>
+
+            <p id="logoutMessage"></p>
+
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+
+        <!-- WELCOME HERO -->
+
+        <section class="dashboard-hero">
+
+            <div class="dashboard-hero-text">
+
+                <p class="eyebrow">
+                    YOUR SPACE ✦
+                </p>
+
+                <h1>
+                    Welcome back,
+                    <span id="userName">there</span>. 🌷
+                </h1>
+
+                <p>
+                    Take a little moment for yourself.
+                    Check in, reflect, breathe, and keep
+                    moving at your own pace.
+                </p>
+
+            </div>
+
+            <div class="dashboard-hero-decoration">
+                <span>♡</span>
+                <span>✦</span>
+                <span>🌷</span>
+            </div>
+
+        </section>
+
+
+        <!-- DAILY REMINDER -->
+
+        <section class="dashboard-reminder">
+
+            <div class="reminder-symbol">
+                ✦
+            </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    A LITTLE REMINDER
+                </p>
+
+                <h2 id="dashboardQuote">
+                    You don't have to have everything
+                    figured out today.
+                </h2>
+
+                <p>
+                    Take things one moment at a time.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DAILY CHECK-IN -->
+
+        <section class="dashboard-checkin">
+
+            <div class="dashboard-section-title">
+
+                <div>
+
+                    <p class="eyebrow">
+                        DAILY CHECK-IN
+                    </p>
+
+                    <h2>
+                        How are you feeling today?
+                    </h2>
+
+                    <p>
+                        There are no right or wrong answers.
+                        Just check in with yourself.
+                    </p>
+
+                </div>
+
+                <span class="section-decoration">
+                    ♡
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-mood-buttons">
+
+                <button
+                    class="dashboard-mood-button"
+                    data-level="1">
+
+                    <span>😌</span>
+
+                    <p>Calm</p>
+
+                </button>
+
+
+                <button
+                    class="dashboard-mood-button"
+                    data-level="2">
+
+                    <span>🙂</span>
+
+                    <p>Okay</p>
+
+                </button>
+
+
+                <button
+                    class="dashboard-mood-button"
+                    data-level="3">
+
+                    <span>😐</span>
+
+                    <p>A little anxious</p>
+
+                </button>
+
+
+                <button
+                    class="dashboard-mood-button"
+                    data-level="4">
+
+                    <span>😟</span>
+
+                    <p>Anxious</p>
+
+                </button>
+
+
+                <button
+                    class="dashboard-mood-button"
+                    data-level="5">
+
+                    <span>😣</span>
+
+                    <p>Very anxious</p>
+
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-checkin-bottom">
+
+                <p id="dashboardCheckinMessage"></p>
+
+                <button
+                    type="button"
+                    id="dashboardSaveCheckin">
+
+                    Save my check-in
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="dashboard-overview">
+
+            <div class="dashboard-section-heading">
+
+                <p class="eyebrow">
+                    YOUR OVERVIEW
+                </p>
+
+                <h2>
+                    A little look at your journey.
+                </h2>
+
+            </div>
+
+
+            <div class="dashboard-stats">
+
+
+                <!-- TODAY -->
+
+                <div class="dashboard-card dashboard-card-purple">
+
+                    <div class="card-top">
+
+                        <span>
+                            TODAY
+                        </span>
+
+                        <span class="card-icon">
+                            🌷
+                        </span>
+
+                    </div>
+
+                    <h2 id="todayMood">
+                        —
+                    </h2>
+
+                    <p id="todayMoodText">
+                        You haven't checked in today.
+                    </p>
+
+                </div>
+
+
+                <!-- AVERAGE -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-top">
+
+                        <span>
+                            YOUR AVERAGE
+                        </span>
+
+                        <span class="card-icon">
+                            ✦
+                        </span>
+
+                    </div>
+
+                    <h2 id="dashboardAverage">
+                        —
+                    </h2>
+
+                    <p>
+                        Based on your check-ins.
+                    </p>
+
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-top">
+
+                        <span>
+                            CHECK-INS
+                        </span>
+
+                        <span class="card-icon">
+                            ♡
+                        </span>
+
+                    </div>
+
+                    <h2 id="totalCheckins">
+                        0
+                    </h2>
+
+                    <p>
+                        Keep taking it one day at a time.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOURNEY -->
+
+        <section class="dashboard-history">
+
+            <div class="dashboard-section-title">
+
+                <div>
+
+                    <p class="eyebrow">
+                        YOUR JOURNEY
+                    </p>
+
+                    <h2>
+                        Your check-in history
+                    </h2>
+
+                    <p>
+                        A gentle record of how you've been
+                        feeling over time.
+                    </p>
+
+                </div>
+
+                <span class="journey-flower">
+                    ✿
+                </span>
+
+            </div>
+
+
+            <div class="journey-box">
+
+                <div id="dashboardHistory">
+
+                    <p class="empty-history">
+                        Your check-ins will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIVITIES -->
+
+        <section class="dashboard-activities">
+
+            <div class="dashboard-section-title">
+
+                <div>
+
+                    <p class="eyebrow">
+                        TAKE A MOMENT
+                    </p>
+
+                    <h2>
+                        What do you need right now?
+                    </h2>
+
+                </div>
+
+                <span class="section-decoration">
+                    ✦
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-activity-grid">
+
+
+                <!-- BREATHING -->
+
+                <a
+                    href="breathing.html"
+                    class="dashboard-activity-card activity-breathe">
+
+                    <div class="activity-icon">
+                        🌿
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Take a breath
+                        </h3>
+
+                        <p>
+                            Slow down and take a few
+                            comfortable breaths.
+                        </p>
+
+                    </div>
+
+                    <span class="activity-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- JOURNAL -->
+
+                <a
+                    href="journal.html"
+                    class="dashboard-activity-card activity-journal">
+
+                    <div class="activity-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Write it down
+                        </h3>
+
+                        <p>
+                            Put your thoughts into words
+                            without judging them.
+                        </p>
+
+                    </div>
+
+                    <span class="activity-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLOSING MESSAGE -->
+
+        <section class="dashboard-closing">
+
+            <span>♡</span>
+
+            <h2>
+                You're doing okay.
+            </h2>
+
+            <p>
+                You don't have to rush your journey.
+                Give yourself some grace today.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Calmly<span>.</span>
+        </h3>
+
+        <p>
+            A gentle space for checking in with yourself.
+        </p>
+
+    </footer>
+
+
+    <script type="module" src="dashboard.js"></script>
+
+</body>
+
+</html>

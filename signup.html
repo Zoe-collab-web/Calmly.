@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Calmly</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="auth-container">
+
+            <a href="index.html" class="logo">
+                Calmly.
+            </a>
+
+            <p class="eyebrow">
+                CREATE YOUR SPACE
+            </p>
+
+            <h1>
+                Let's get started.
+            </h1>
+
+            <p class="auth-intro">
+                Create an account to begin your Calmly journey.
+            </p>
+
+
+            <form id="signupForm">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create a password"
+                    minlength="6"
+                    required
+                >
+
+
+                <button type="submit">
+                    Create account
+                </button>
+
+            </form>
+
+
+            <p id="signupMessage"></p>
+
+
+            <p class="auth-switch">
+                Already have an account?
+                <a href="login.html">
+                    Log in
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script type="module" src="signup.js"></script>
+
+</body>
+
+</html>

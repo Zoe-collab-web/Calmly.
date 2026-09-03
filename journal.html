@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Journal | Calmly</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+
+        <a href="index.html" class="logo">
+            Calmly.
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← Back home
+        </a>
+
+    </header>
+
+
+    <main class="journal-page">
+
+        <section class="journal-container">
+
+            <p class="eyebrow">Your private space</p>
+
+            <h1>Write it down.</h1>
+
+            <p class="journal-intro">
+                Put your thoughts into words. You don't have to make them perfect.
+                Just write what you're feeling.
+            </p>
+
+
+            <textarea
+                id="journalText"
+                placeholder="What's on your mind today?"
+            ></textarea>
+
+
+            <button id="saveJournal">
+                Save entry
+            </button>
+
+
+            <p id="journalMessage"></p>
+
+
+            <section class="journal-history">
+
+                <h2>Previous entries</h2>
+
+                <div id="journalEntries">
+                    <p class="empty-journal">
+                        Your journal entries will appear here.
+                    </p>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script src="journal.js"></script>
+
+</body>
+
+</html>

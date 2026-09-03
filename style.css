@@ -1,0 +1,2476 @@
+/* =====================================================
+   CALMLY — GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #faf7fb;
+    color: #2d2631;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   HEADER & NAVIGATION
+===================================================== */
+
+header {
+    width: 90%;
+    max-width: 1400px;
+    height: 70px;
+
+    margin: 20px auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+
+    border: 1px solid rgba(88, 77, 96, 0.15);
+    border-radius: 35px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.div1 {
+    flex-shrink: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.div1 span {
+    color: purple;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+header nav a {
+    font-size: 16px;
+    color: #554d58;
+;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+header nav a:hover {
+    color: purple;
+}
+
+.login {
+    flex-shrink: 0;
+
+    padding: 11px 23px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #302434;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login:hover {
+    transform: translateY(-2px);
+    background: purple;
+}
+
+
+/* =====================================================
+   HOME — HERO
+===================================================== */
+
+.section1 {
+    min-height: 90vh;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 80px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+.div2 {
+    max-width: 580px;
+}
+
+.div2 > p:first-child {
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    color: #8d7195;
+}
+
+.div2 h1 {
+    margin: 20px 0;
+
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 0.98;
+    letter-spacing: -4px;
+}
+
+.div2 h1 span {
+    color: purple !important;
+}
+
+.div2 > p {
+    max-width: 520px;
+
+    color: #716875;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   HOME — HERO BUTTONS
+===================================================== */
+
+.div9 {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.div9 > a {
+    padding: 13px 22px;
+
+    border-radius: 30px;
+
+    background: #302434;
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.div9 > a:last-child {
+    background: transparent;
+
+    border: 1px solid #d8cbdc;
+
+    color: #302434;
+}
+
+.div9 > a:hover {
+    transform: translateY(-3px);
+    background: purple;
+    color: white;
+}
+
+
+/* =====================================================
+   HOME — DAILY REMINDER
+===================================================== */
+
+.div3 {
+    width: 380px;
+    min-height: 300px;
+
+    flex-shrink: 0;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    background: #eee4f1;
+
+    box-shadow: 0 20px 60px rgba(70, 40, 80, 0.08);
+}
+
+.div3 > p {
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    color: #806687;
+}
+
+.div3 h2 {
+    margin: 20px 0;
+
+    font-size: 27px;
+    line-height: 1.4;
+}
+
+.div3 > span {
+    color: #756878;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   HOME — CHECK-IN
+===================================================== */
+
+#checkin {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 100px auto;
+    padding: 80px 40px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background: white;
+}
+
+.div4 p,
+.div5 > p,
+.div8 > p {
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    color: #916c99;
+}
+
+.div4 h2,
+.div5 h2,
+.div8 h3 {
+    margin: 15px 0;
+
+    font-size: 38px;
+}
+
+.div4 > span,
+.div5 > span {
+    color: #817780;
+}
+
+.div5 {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+#checkin .div5 {
+    margin: 45px 0 30px;
+}
+
+
+/* =====================================================
+   HOME — MOOD BUTTONS
+===================================================== */
+
+.moodbutton {
+    width: 145px;
+    min-height: 130px;
+
+    padding: 20px;
+
+    border: 1px solid #eee5f0;
+    border-radius: 20px;
+
+    background: #faf7fb;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.moodbutton span {
+    font-size: 30px;
+}
+
+.moodbutton p {
+    margin-bottom: 0;
+
+    color: #655b68;
+}
+
+.moodbutton:hover {
+    transform: translateY(-6px);
+
+    border-color: #c6a6cc;
+}
+
+.moodbutton.selected {
+    background: #eee1f1;
+
+    border: 2px solid purple;
+
+    transform: translateY(-5px);
+}
+
+
+/* =====================================================
+   HOME — SAVE CHECK-IN
+===================================================== */
+
+.checkinbutton {
+    display: block;
+
+    margin: 25px auto 0;
+    padding: 13px 28px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #302434;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.checkinbutton:hover {
+    background: purple;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HOME — JOURNEY
+===================================================== */
+
+#journey {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 120px auto;
+
+    text-align: center;
+}
+
+#journey .div5 {
+    display: block;
+}
+
+.div6 {
+    width: 300px;
+
+    margin: 50px auto 0;
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: #eee4f1;
+}
+
+.div6 p {
+    color: #806687;
+}
+
+.div6 h2 {
+    margin: 15px 0;
+
+    font-size: 55px;
+}
+
+.div7 {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    font-size: 12px;
+    color: #756878;
+}
+
+
+/* =====================================================
+   HOME — ACTIVITIES
+===================================================== */
+
+#activities {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 120px auto 0;
+
+    text-align: center;
+}
+
+.articlemaindiv {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 50px;
+}
+
+.articlediv {
+    min-height: 240px;
+
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #eee5f0;
+    border-radius: 25px;
+
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+.articlediv:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 20px 50px rgba(70, 40, 80, 0.08);
+}
+
+.articlediv > span {
+    margin-bottom: 20px;
+
+    font-size: 35px;
+}
+
+.articlediv a {
+    font-size: 19px;
+    font-weight: 600;
+
+    color: #302434;
+}
+
+.articlediv a:hover {
+    color: purple;
+}
+
+.articlediv p {
+    color: #817780;
+
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    margin-top: 120px;
+    padding: 50px 20px;
+
+    border-top: 1px solid #eee5f0;
+
+    text-align: center;
+
+    background-color: #421f5cc8;
+}
+
+footer h3 {
+    font-size: 25px;
+}
+
+footer span {
+    color: purple;
+}
+
+footer p {
+    color: #817780;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BREATHING PAGE
+===================================================== */
+
+.breathing-page {
+    min-height: 100vh;
+
+    padding: 30px 20px 60px;
+
+    background: #faf7fb;
+}
+
+.breathing-header {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.breathing-header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    color: #302936;
+}
+
+.breathing-header a {
+    color: #302936;
+    font-size: 15px;
+}
+
+.breathing-container {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid rgba(88, 77, 96, 0.12);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 60px rgba(70, 40, 80, 0.08);
+}
+
+.breathing-container p {
+    color: #756d7a;
+    font-size: 16px;
+}
+
+.breathing-container h2 {
+    margin-bottom: 10px;
+
+    color: #302936;
+    font-size: 30px;
+}
+
+#breathingCircle {
+    width: 180px;
+    height: 180px;
+
+    margin: 40px auto;
+
+    border-radius: 50%;
+
+    background: #eee4f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 4s ease-in-out;
+}
+
+#breathingText {
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #5d4565;
+}
+
+#breathingCircle.inhale {
+    transform: scale(1.35);
+}
+
+#breathingCircle.exhale {
+    transform: scale(1);
+}
+
+#breathingTimer {
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+    color: #756d7a;
+}
+
+#startBreathing {
+    padding: 13px 30px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #302936;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#startBreathing:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   JOURNAL PAGE
+===================================================== */
+
+.journal-page {
+    min-height: 100vh;
+
+    padding: 30px 20px 60px;
+
+    background: #faf7fb;
+}
+
+.journal-header {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.journal-header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    color: #302936;
+}
+
+.journal-header a {
+    color: #302936;
+    font-size: 15px;
+}
+
+.journal-container {
+    width: 90%;
+    max-width: 800px;
+
+    margin: 0 auto;
+    padding: 45px 35px;
+
+    background: white;
+
+    border: 1px solid rgba(88, 77, 96, 0.12);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 60px rgba(70, 40, 80, 0.08);
+}
+
+.journal-container h2 {
+    margin-bottom: 10px;
+
+    color: #302936;
+    font-size: 30px;
+}
+
+.journal-container > p {
+    margin-bottom: 30px;
+
+    color: #756d7a;
+}
+
+#journalText {
+    width: 100%;
+    min-height: 280px;
+
+    padding: 20px;
+
+    resize: vertical;
+
+    border: 1px solid rgba(88, 77, 96, 0.2);
+    border-radius: 20px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #302936;
+    background: #fcfafd;
+
+    transition: 0.3s ease;
+}
+
+#journalText:focus {
+    border-color: #b89bc2;
+
+    box-shadow: 0 0 0 3px rgba(184, 155, 194, 0.12);
+}
+
+#journalText::placeholder {
+    color: #aaa2ad;
+}
+
+#saveJournal {
+    margin-top: 20px;
+    padding: 13px 30px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #302936;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#saveJournal:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#journalEntries {
+    margin-top: 40px;
+}
+
+.journal-entry {
+    padding: 20px;
+    margin-bottom: 15px;
+
+    background: #faf7fb;
+
+    border: 1px solid rgba(88, 77, 96, 0.1);
+    border-radius: 20px;
+}
+
+.journal-entry p {
+    color: #4f4653;
+
+    line-height: 1.7;
+}
+
+.journal-entry small {
+    color: #958b99;
+}
+
+.delete-entry {
+    margin-top: 15px;
+    padding: 9px 18px;
+
+    border: 1px solid rgba(120, 90, 130, 0.2);
+    border-radius: 20px;
+
+    background: transparent;
+    color: #756d7a;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.delete-entry:hover {
+    background: #eee4f1;
+    color: #4f3a57;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   AUTH PAGES
+===================================================== */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 430px;
+
+    text-align: center;
+}
+
+.auth-container .logo {
+    display: inline-block;
+
+    margin-bottom: 50px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #302434;
+}
+
+.auth-container .logo:hover {
+    color: purple;
+}
+
+.auth-container .eyebrow {
+    margin-bottom: 10px;
+}
+
+.auth-container h1 {
+    margin: 10px 0;
+
+    font-size: 45px;
+    letter-spacing: -2px;
+}
+
+.auth-intro {
+    margin-bottom: 35px;
+
+    color: #817780;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   AUTH — FORMS
+===================================================== */
+
+#loginForm,
+#signupForm {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    text-align: left;
+}
+
+#loginForm label,
+#signupForm label {
+    margin-top: 12px;
+
+    font-size: 14px;
+    color: #4f4652;
+}
+
+#loginForm input,
+#signupForm input {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #e3dce5;
+    border-radius: 13px;
+
+    outline: none;
+
+    background: white;
+    color: #302434;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+#loginForm input:focus,
+#signupForm input:focus {
+    border-color: #a77caf;
+
+    box-shadow: 0 0 0 3px rgba(128, 0, 128, 0.06);
+}
+
+#loginForm button,
+#signupForm button {
+    margin-top: 20px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #302434;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#loginForm button:hover,
+#signupForm button:hover {
+    background: purple;
+
+    transform: translateY(-2px);
+}
+
+#loginMessage,
+#signupMessage {
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+    color: #806687;
+
+    background: transparent;
+}
+
+.auth-switch {
+    margin-top: 25px;
+
+    color: #817780;
+    font-size: 14px;
+}
+
+.auth-switch a {
+    color: purple;
+    font-weight: 500;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   DASHBOARD — HEADER
+===================================================== */
+
+.dashboard-header {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 70px;
+
+    margin: 20px auto;
+    padding: 12px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(128, 80, 140, 0.12);
+    border-radius: 40px;
+
+    box-shadow: 0 10px 35px rgba(70, 40, 80, 0.06);
+}
+
+.dashboard-header nav {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.dashboard-header nav a {
+    color: #554d58;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.dashboard-header nav a:hover {
+    color: purple;
+}
+
+.dashboard-actions {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logout {
+    padding: 11px 23px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #302434;
+    color: white;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.logout:hover {
+    transform: translateY(-2px);
+
+    background: #4a3850;
+}
+
+#logoutMessage {
+    position: absolute;
+
+    top: 100%;
+    right: 0;
+
+    width: max-content;
+
+    margin: 8px 0 0;
+
+    font-size: 12px;
+    color: #756d7a;
+
+    background: transparent;
+}
+
+
+/* =====================================================
+   DASHBOARD — MAIN
+===================================================== */
+
+.dashboard {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 70px 0 100px;
+}
+
+
+/* =====================================================
+   DASHBOARD — HERO
+===================================================== */
+
+.dashboard-hero {
+    min-height: 330px;
+
+    padding: 55px 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 35px;
+
+    background: #eee4f1;
+
+    box-shadow: 0 25px 70px rgba(70, 40, 80, 0.08);
+}
+
+.dashboard-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -80px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.dashboard-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: 45%;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.dashboard-hero-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+.dashboard-hero h1 {
+    margin: 15px 0;
+
+    font-size: clamp(45px, 6vw, 72px);
+
+    line-height: 0.98;
+    letter-spacing: -4px;
+}
+
+.dashboard-hero h1 span {
+    color: #80618a;
+}
+
+.dashboard-hero-text > p:last-child {
+    max-width: 570px;
+
+    margin: 20px 0 0;
+
+    color: #756d7a;
+
+    line-height: 1.7;
+}
+
+.dashboard-hero-decoration {
+    position: relative;
+    z-index: 2;
+
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-hero-decoration span {
+    position: absolute;
+
+    font-size: 25px;
+}
+
+.dashboard-hero-decoration span:nth-child(1) {
+    top: 10px;
+    right: 30px;
+
+    font-size: 35px;
+}
+
+.dashboard-hero-decoration span:nth-child(2) {
+    bottom: 20px;
+    left: 20px;
+
+    font-size: 20px;
+}
+
+.dashboard-hero-decoration span:nth-child(3) {
+    font-size: 90px;
+}
+
+
+/* =====================================================
+   DASHBOARD — REMINDER
+===================================================== */
+
+.dashboard-reminder {
+    margin-top: 25px;
+
+    padding: 30px 35px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    border-radius: 28px;
+
+    background: #302434;
+    color: white;
+
+    box-shadow: 0 20px 55px rgba(48, 36, 52, 0.15);
+}
+
+.reminder-symbol {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eee4f1;
+    color: #80618a;
+
+    font-size: 25px;
+}
+
+.dashboard-reminder .eyebrow {
+    color: #cdbbd2;
+}
+
+.dashboard-reminder h2 {
+    max-width: 800px;
+
+    margin: 5px 0 8px;
+
+    font-size: clamp(22px, 3vw, 32px);
+
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+.dashboard-reminder p:last-child {
+    margin: 0;
+
+    color: #bdb2c1;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   DASHBOARD — CHECK-IN
+===================================================== */
+
+.dashboard-checkin {
+    width: 100%;
+
+    margin: 80px 0 0;
+    padding: 45px;
+
+    background: white;
+
+    border: 1px solid #eee5f0;
+    border-radius: 32px;
+
+    box-shadow: 0 20px 60px rgba(70, 40, 80, 0.07);
+}
+
+.dashboard-section-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.dashboard-section-title h2,
+.dashboard-section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(30px, 4vw, 42px);
+
+    letter-spacing: -1.5px;
+}
+
+.dashboard-section-title p:last-child,
+.dashboard-section-heading p:last-child {
+    margin-top: 10px;
+
+    color: #817780;
+
+    line-height: 1.6;
+}
+
+.section-decoration,
+.journey-flower {
+    font-size: 35px;
+    color: #9b7ca5;
+}
+
+
+/* =====================================================
+   DASHBOARD — MOOD BUTTONS
+===================================================== */
+
+.dashboard-mood-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.dashboard-mood-button {
+    min-height: 135px;
+
+    padding: 20px 10px;
+
+    border: 1px solid #eee5f0;
+    border-radius: 22px;
+
+    background: #faf7fb;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.3s ease;
+}
+
+.dashboard-mood-button:hover {
+    transform: translateY(-5px);
+
+    border-color: #c7b0cd;
+
+    box-shadow: 0 12px 30px rgba(70, 40, 80, 0.08);
+}
+
+.dashboard-mood-button.selected {
+    border-color: #9b7ca5;
+
+    background: #eee4f1;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(70, 40, 80, 0.08);
+}
+
+.dashboard-mood-button span {
+    font-size: 35px;
+}
+
+.dashboard-mood-button p {
+    margin: 10px 0 0;
+
+    color: #756d7a;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   DASHBOARD — CHECK-IN SAVE
+===================================================== */
+
+.dashboard-checkin-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+#dashboardCheckinMessage {
+    margin: 0;
+
+    color: #756d7a;
+    font-size: 14px;
+}
+
+#dashboardSaveCheckin {
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 28px;
+
+    background: #302936;
+    color: white;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#dashboardSaveCheckin:hover {
+    transform: translateY(-2px);
+
+    background: #4a3850;
+}
+
+#dashboardSaveCheckin span {
+    margin-left: 8px;
+}
+
+
+/* =====================================================
+   DASHBOARD — OVERVIEW
+===================================================== */
+
+.dashboard-overview {
+    margin-top: 100px;
+}
+
+.dashboard-section-heading {
+    margin-bottom: 30px;
+}
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.dashboard-card {
+    min-height: 205px;
+
+    padding: 30px;
+
+    border: 1px solid #eee5f0;
+    border-radius: 28px;
+
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 45px rgba(70, 40, 80, 0.08);
+}
+
+.dashboard-card-purple {
+    background: #eee4f1;
+
+    border-color: transparent;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #817780;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.card-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #faf7fb;
+
+    font-size: 17px;
+}
+
+.dashboard-card-purple .card-icon {
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.dashboard-card h2 {
+    margin: 28px 0 10px;
+
+    font-size: 50px;
+
+    color: #302434;
+
+    letter-spacing: -2px;
+}
+
+.dashboard-card p {
+    margin: 0;
+
+    color: #817780;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   DASHBOARD — HISTORY
+===================================================== */
+
+.dashboard-history {
+    margin-top: 110px;
+}
+
+.journey-box {
+    padding: 10px;
+
+    border-radius: 28px;
+
+    background: #eee4f1;
+}
+
+#dashboardHistory {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.history-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 21px 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(128, 80, 140, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.history-card:hover {
+    transform: translateX(4px);
+}
+
+.history-card span {
+    color: #817780;
+    font-size: 13px;
+}
+
+.history-card strong {
+    color: #302434;
+    font-size: 14px;
+}
+
+.empty-history {
+    margin: 0;
+
+    padding: 35px;
+
+    text-align: center;
+
+    color: #817780;
+
+    background: white;
+
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   DASHBOARD — ACTIVITIES
+===================================================== */
+
+.dashboard-activities {
+    margin-top: 110px;
+}
+
+.dashboard-activity-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.dashboard-activity-card {
+    min-height: 190px;
+
+    padding: 30px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 28px;
+
+    transition: 0.3s ease;
+}
+
+.activity-breathe {
+    background: #eee4f1;
+}
+
+.activity-journal {
+    background: #f4e9ed;
+}
+
+.dashboard-activity-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 20px 45px rgba(70, 40, 80, 0.1);
+}
+
+.activity-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    font-size: 25px;
+}
+
+.dashboard-activity-card h3 {
+    margin: 18px 0 7px;
+
+    color: #302434;
+    font-size: 22px;
+}
+
+.dashboard-activity-card p {
+    max-width: 420px;
+
+    margin: 0;
+
+    color: #756d7a;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.activity-arrow {
+    position: absolute;
+
+    right: 28px;
+    bottom: 27px;
+
+    font-size: 25px;
+    color: #80618a;
+
+    transition: 0.3s ease;
+}
+
+.dashboard-activity-card:hover .activity-arrow {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   DASHBOARD — CLOSING
+===================================================== */
+
+.dashboard-closing {
+    margin-top: 100px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    border-radius: 32px;
+
+    background: white;
+
+    border: 1px solid #eee5f0;
+}
+
+.dashboard-closing > span {
+    color: #9b7ca5;
+    font-size: 30px;
+}
+
+.dashboard-closing h2 {
+    margin: 15px 0 8px;
+
+    font-size: 35px;
+
+    letter-spacing: -1px;
+}
+
+.dashboard-closing p {
+    max-width: 500px;
+
+    margin: auto;
+
+    color: #817780;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    header nav {
+        gap: 20px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .section1 {
+        gap: 40px;
+    }
+
+    .div3 {
+        width: 330px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE — TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    /* Home header */
+
+    header {
+        width: 94%;
+        height: 65px;
+
+        padding: 0 18px;
+    }
+
+    .div1 {
+        font-size: 22px;
+    }
+
+    header nav {
+        gap: 15px;
+    }
+
+    header nav a {
+        display: none;
+    }
+
+    /* FIXED: Dashboard link stays available on mobile */
+    header nav .dashboard-link {
+        display: block;
+    }
+
+
+    /* Home hero */
+
+    .section1 {
+        flex-direction: column;
+
+        padding-top: 70px;
+
+        text-align: center;
+    }
+
+    .div2 {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .div2 h1 {
+        font-size: 52px;
+
+        letter-spacing: -3px;
+    }
+
+    .div2 > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .div9 {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .div3 {
+        width: 100%;
+        max-width: 400px;
+
+        text-align: center;
+    }
+
+
+    /* Home check-in */
+
+    #checkin {
+        padding: 60px 20px;
+    }
+
+    .div4 h2,
+    .div5 h2,
+    .div8 h3 {
+        font-size: 30px;
+    }
+
+    .moodbutton {
+        width: 100%;
+        max-width: 400px;
+
+        min-height: 150px;
+
+        font-size: 30px;
+    }
+
+
+    /* Home activities */
+
+    .articlemaindiv {
+        grid-template-columns: 1fr;
+    }
+
+    .articlediv {
+        min-height: 200px;
+    }
+
+
+    /* Dashboard header */
+
+    .dashboard-header {
+        width: 94%;
+
+        padding: 13px 18px;
+    }
+
+    .dashboard-header nav {
+        gap: 15px;
+    }
+
+    .dashboard-header nav a {
+        display: none;
+    }
+
+    .dashboard-header nav a[href="index.html"] {
+        display: block;
+    }
+
+
+    /* Dashboard hero */
+
+    .dashboard-hero {
+        padding: 45px 35px;
+    }
+
+    .dashboard-hero-decoration {
+        width: 120px;
+        height: 120px;
+    }
+
+    .dashboard-hero-decoration span:nth-child(3) {
+        font-size: 65px;
+    }
+
+
+    /* Dashboard mood */
+
+    .dashboard-mood-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* Dashboard cards */
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-activity-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE — SMALL PHONES
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .breathing-page,
+    .journal-page {
+        padding: 20px 12px 40px;
+    }
+
+    .breathing-header,
+    .journal-header {
+        width: 94%;
+
+        margin-bottom: 35px;
+    }
+
+    .breathing-header h1,
+    .journal-header h1 {
+        font-size: 24px;
+    }
+
+    .breathing-container,
+    .journal-container {
+        width: 94%;
+
+        padding: 35px 20px;
+
+        border-radius: 25px;
+    }
+
+    .breathing-container h2,
+    .journal-container h2 {
+        font-size: 25px;
+    }
+
+    #breathingCircle {
+        width: 150px;
+        height: 150px;
+    }
+
+    #breathingText {
+        font-size: 18px;
+    }
+
+    #journalText {
+        min-height: 240px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE — VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 480px) {
+
+    /* Header */
+
+    header {
+        width: 92%;
+
+        padding: 0 15px;
+    }
+
+    .div1 {
+        font-size: 21px;
+    }
+
+    .login {
+        padding: 9px 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* Home */
+
+    .div2 h1 {
+        font-size: 43px;
+    }
+
+    .div3 {
+        padding: 25px;
+    }
+
+    .div9 {
+        flex-direction: column;
+    }
+
+    .div9 > a {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .moodbutton {
+        width: 100%;
+
+        min-height: 130px;
+    }
+
+
+    /* Auth */
+
+    .auth-container h1 {
+        font-size: 38px;
+    }
+
+    .auth-container .logo {
+        margin-bottom: 35px;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard {
+        width: 92%;
+
+        padding-top: 45px;
+    }
+
+    .dashboard-header {
+        width: 92%;
+
+        padding: 10px 15px;
+    }
+
+    .dashboard-header .div1 {
+        font-size: 21px;
+    }
+
+    .dashboard-header nav {
+        display: none;
+    }
+
+    .logout {
+        padding: 9px 16px;
+
+        font-size: 12px;
+    }
+
+    .dashboard-hero {
+        min-height: 380px;
+
+        padding: 35px 25px;
+
+        align-items: flex-start;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .dashboard-hero-text > p:last-child {
+        font-size: 14px;
+    }
+
+    .dashboard-hero-decoration {
+        position: absolute;
+
+        right: 10px;
+        bottom: 5px;
+
+        opacity: 0.7;
+    }
+
+    .dashboard-reminder {
+        padding: 25px;
+
+        align-items: flex-start;
+    }
+
+    .reminder-symbol {
+        width: 45px;
+        height: 45px;
+
+        font-size: 18px;
+    }
+
+    .dashboard-reminder h2 {
+        font-size: 21px;
+    }
+
+    .dashboard-checkin {
+        margin-top: 60px;
+
+        padding: 25px;
+
+        border-radius: 25px;
+    }
+
+    .dashboard-section-title h2,
+    .dashboard-section-heading h2 {
+        font-size: 30px;
+    }
+
+    .dashboard-mood-buttons {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .dashboard-mood-button {
+        min-height: 115px;
+    }
+
+    .dashboard-checkin-bottom {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    #dashboardSaveCheckin {
+        width: 100%;
+    }
+
+    .dashboard-card {
+        min-height: 180px;
+
+        padding: 25px;
+    }
+
+    .dashboard-card h2 {
+        font-size: 43px;
+    }
+
+    .history-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+
+        padding: 18px;
+    }
+
+    .dashboard-activity-card {
+        min-height: 210px;
+
+        padding: 25px;
+    }
+
+    .dashboard-closing {
+        padding: 45px 25px;
+    }
+
+    .dashboard-closing h2 {
+        font-size: 29px;
+    }
+}
+
+
+/* =====================================================
+   LARGE SCREENS
+===================================================== */
+
+@media (min-width: 1600px) {
+
+    header {
+        width: 85%;
+        max-width: 1500px;
+
+        padding: 20px 35px;
+    }
+
+    .div1 {
+        font-size: 30px;
+    }
+
+    header nav {
+        gap: 50px;
+    }
+
+    header nav a {
+        font-size: 17px;
+    }
+
+    .login {
+        padding: 14px 30px;
+
+        font-size: 16px;
+    }
+
+
+    /* Home hero */
+
+    .section1 {
+        max-width: 1500px;
+
+        min-height: 80vh;
+
+        gap: 150px;
+
+        padding: 120px 0;
+    }
+
+    .div2 {
+        max-width: 750px;
+    }
+
+    .div2 h1 {
+        font-size: 100px;
+
+        letter-spacing: -5px;
+    }
+
+    .div2 > p {
+        max-width: 650px;
+
+        font-size: 18px;
+    }
+
+    .div9 > a {
+        padding: 16px 28px;
+
+        font-size: 16px;
+    }
+
+    .div3 {
+        width: 480px;
+        min-height: 350px;
+
+        padding: 50px;
+    }
+
+    .div3 h2 {
+        font-size: 35px;
+    }
+
+
+    /* Check-in */
+
+    #checkin {
+        max-width: 1400px;
+
+        padding: 110px 70px;
+    }
+
+    .div4 h2,
+    .div5 h2,
+    .div8 h3 {
+        font-size: 50px;
+    }
+
+    .div4 > span,
+    .div5 > span {
+        font-size: 17px;
+    }
+
+    #checkin .div5 {
+        gap: 25px;
+    }
+
+    .moodbutton {
+        width: 190px;
+        min-height: 160px;
+    }
+
+    .moodbutton span {
+        font-size: 40px;
+    }
+
+    .moodbutton p {
+        font-size: 16px;
+    }
+
+
+    /* Journey */
+
+    #journey {
+        max-width: 1400px;
+    }
+
+    .div6 {
+        width: 380px;
+
+        padding: 50px;
+    }
+
+    .div6 h2 {
+        font-size: 70px;
+    }
+
+
+    /* Activities */
+
+    #activities {
+        max-width: 1400px;
+    }
+
+    .articlemaindiv {
+        gap: 30px;
+    }
+
+    .articlediv {
+        min-height: 300px;
+
+        padding: 45px;
+    }
+
+    .articlediv > span {
+        font-size: 45px;
+    }
+
+    .articlediv a {
+        font-size: 23px;
+    }
+
+    .articlediv p {
+        max-width: 300px;
+
+        font-size: 16px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 70px 20px;
+    }
+
+    footer h3 {
+        font-size: 30px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard-header {
+        max-width: 1700px;
+
+        padding: 20px 35px;
+    }
+
+    .dashboard-header nav {
+        gap: 50px;
+    }
+
+    .dashboard-header nav a {
+        font-size: 17px;
+    }
+
+    .dashboard {
+        max-width: 1500px;
+
+        padding: 130px 0;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 95px;
+    }
+
+    .dashboard-stats {
+        gap: 30px;
+    }
+
+    .dashboard-card {
+        min-height: 280px;
+
+        padding: 50px;
+    }
+
+    .dashboard-card h2 {
+        font-size: 70px;
+    }
+
+    .dashboard-card p,
+    .dashboard-card span {
+        font-size: 16px;
+    }
+
+    .dashboard-section-title h2,
+    .dashboard-section-heading h2 {
+        font-size: 50px;
+    }
+
+    .dashboard-activity-grid {
+        gap: 30px;
+    }
+
+    .dashboard-activity-card {
+        min-height: 300px;
+
+        padding: 50px;
+    }
+
+    .dashboard-activity-card h3 {
+        font-size: 25px;
+    }
+
+    .dashboard-activity-card p {
+        font-size: 17px;
+    }
+}
+
+
+/* =====================================================
+   EXTRA LARGE SCREENS
+===================================================== */
+
+@media (min-width: 2200px) {
+
+    .dashboard {
+        max-width: 1800px;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 115px;
+    }
+
+    .dashboard-card h2 {
+        font-size: 85px;
+    }
+
+    .dashboard-section-title h2,
+    .dashboard-section-heading h2 {
+        font-size: 60px;
+    }
+
+    .section1 {
+        max-width: 1800px;
+    }
+
+    .div2 h1 {
+        font-size: 120px;
+    }
+
+    .div2 > p {
+        font-size: 20px;
+    }
+
+    #checkin,
+    #journey,
+    #activities {
+        max-width: 1700px;
+    }
+
+    .div4 h2,
+    .div5 h2,
+    .div8 h3 {
+        font-size: 60px;
+    }
+}
