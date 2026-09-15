@@ -1,3 +1,4 @@
+// Calmly dashboard — corrected to use public.mood_entries
 import { supabase } from "./supabase.js";
 
 
@@ -63,18 +64,81 @@ async function initDashboard() {
     const quotes = [
 
         "You don't have to have everything figured out today.",
-
         "Take things one moment at a time.",
-
         "It's okay to slow down and breathe.",
-
         "Be gentle with yourself today.",
-
         "Small steps still count.",
-
         "You deserve moments of peace.",
-
-        "Today is another chance to check in with yourself."
+        "Today is another chance to check in with yourself.",
+        "You are allowed to take things slowly.",
+        "One difficult moment does not define your whole day.",
+        "You can pause without falling behind.",
+        "Give yourself the same kindness you give to others.",
+        "There is no perfect way to have a day.",
+        "Breathe in. Breathe out. Take your time.",
+        "You are doing better than you think.",
+        "It's okay if today feels a little different.",
+        "You don't need to rush through every moment.",
+        "Rest is part of moving forward.",
+        "Your feelings are worth listening to.",
+        "You can take today one step at a time.",
+        "A small moment of calm is still progress.",
+        "You are allowed to make space for yourself.",
+        "It's okay to pause and reset.",
+        "Not every day needs to be a productive day.",
+        "Take a breath and give yourself a moment.",
+        "You can start again whenever you need to.",
+        "Be patient with yourself. You're learning.",
+        "You don't have to do everything at once.",
+        "Your pace is allowed to be your own.",
+        "There is still room for good moments today.",
+        "Take care of yourself, one little choice at a time.",
+        "You deserve a moment to simply breathe.",
+        "It's okay to have days that feel messy.",
+        "You are more than one difficult moment.",
+        "Give yourself permission to slow down.",
+        "You can handle this moment without figuring out everything else.",
+        "Today doesn't have to be perfect to be meaningful.",
+        "Take a little time to check in with yourself.",
+        "You are allowed to put yourself first sometimes.",
+        "A quiet moment can make space for a clearer mind.",
+        "Keep going gently.",
+        "You don't need to compare your journey to anyone else's.",
+        "Your progress doesn't have to look big to matter.",
+        "It's okay to ask for support when you need it.",
+        "You deserve patience, kindness, and understanding.",
+        "Take another breath. You're here, and that's enough for this moment.",
+        "Some days are for growing, and some days are for resting.",
+        "You can make today a little softer for yourself.",
+        "Listen to what you need, not just what you expect from yourself.",
+        "You are allowed to have a fresh start today.",
+        "Slow down. There is no need to rush this moment.",
+        "Give yourself room to feel, breathe, and continue.",
+        "Even a tiny step forward is still a step.",
+        "You don't need to earn rest.",
+        "Your wellbeing matters too.",
+        "Take today as it comes.",
+        "You can always pause, breathe, and try again.",
+        "Be kind to the person you're becoming.",
+        "You are allowed to celebrate small victories.",
+        "Make room for a little peace today.",
+        "One moment at a time. One breath at a time.",
+        "You don't have to carry everything at once.",
+        "It's okay to give yourself a break.",
+        "Your journey doesn't need to happen overnight.",
+        "There is nothing wrong with needing a moment.",
+        "Today, choose gentleness where you can.",
+        "You can take care of yourself without having all the answers.",
+        "A calmer moment can begin with one slow breath.",
+        "Keep choosing small moments of care.",
+        "You are learning, growing, and figuring things out.",
+        "It's okay to reset and begin again.",
+        "Your feelings can change, and so can your day.",
+        "Give yourself credit for making it through the little things.",
+        "You deserve to feel safe, heard, and supported.",
+        "Take a moment. Unclench your shoulders. Breathe.",
+        "You can be gentle with yourself and still keep growing.",
+        "Today is yours to take one moment at a time."
 
     ];
 
@@ -130,12 +194,14 @@ async function initDashboard() {
                         error
                     );
 
+
                     if (logoutMessage) {
 
                         logoutMessage.textContent =
                             "Something went wrong.";
 
                     }
+
 
                     logoutButton.disabled = false;
 
@@ -156,10 +222,11 @@ async function initDashboard() {
 
                 setTimeout(function () {
 
-    window.location.href =
-        "index.html";
+                    window.location.href =
+                        "index.html";
 
-}, 800);
+                }, 800);
+
             }
         );
 
@@ -269,7 +336,7 @@ async function initDashboard() {
 
 
     /* ================================
-       GET CHECK-INS
+       GET MOOD ENTRIES
     ================================= */
 
     async function getCheckIns() {
@@ -279,7 +346,7 @@ async function initDashboard() {
             error
         } = await supabase
 
-            .from("check_ins")
+            .from("mood_entries")
 
             .select("*")
 
@@ -299,7 +366,7 @@ async function initDashboard() {
         if (error) {
 
             console.error(
-                "Could not get check-ins:",
+                "Could not get mood entries:",
                 error
             );
 
@@ -351,6 +418,10 @@ async function initDashboard() {
             );
 
 
+        /* ================================
+           TOTAL CHECK-INS
+        ================================= */
+
         if (totalCheckins) {
 
             totalCheckins.textContent =
@@ -374,7 +445,7 @@ async function initDashboard() {
 
                         return sum +
                             Number(
-                                checkIn.level
+                                checkIn.mood_score
                             );
 
                     },
@@ -427,7 +498,7 @@ async function initDashboard() {
 
             const mood =
                 moods[
-                    todayCheckIn.level
+                    todayCheckIn.mood_score
                 ];
 
 
@@ -503,7 +574,7 @@ async function initDashboard() {
 
                 const mood =
                     moods[
-                        checkIn.level
+                        checkIn.mood_score
                     ];
 
 
@@ -592,15 +663,15 @@ async function initDashboard() {
 
 
                 /* ================================
-                   CHECK TODAY'S CHECK-IN
+                   CHECK TODAY'S ENTRY
                 ================================= */
 
                 const {
-                    data: existingCheckIn,
+                    data: existingEntry,
                     error: existingError
                 } = await supabase
 
-                    .from("check_ins")
+                    .from("mood_entries")
 
                     .select("id")
 
@@ -620,8 +691,10 @@ async function initDashboard() {
                 if (existingError) {
 
                     console.error(
+                        "Could not check previous entry:",
                         existingError
                     );
+
 
                     if (checkinMessage) {
 
@@ -629,6 +702,7 @@ async function initDashboard() {
                             "Couldn't check your previous entry.";
 
                     }
+
 
                     saveButton.disabled = false;
 
@@ -643,23 +717,25 @@ async function initDashboard() {
 
 
                 /* ================================
-                   UPDATE TODAY'S CHECK-IN
+                   UPDATE TODAY'S ENTRY
                 ================================= */
 
-                if (existingCheckIn) {
+                if (existingEntry) {
 
                     const result =
                         await supabase
 
-                            .from("check_ins")
+                            .from("mood_entries")
 
                             .update({
-                                level: selectedLevel
+                                mood_score: selectedLevel,
+                                updated_at:
+                                    new Date().toISOString()
                             })
 
                             .eq(
                                 "id",
-                                existingCheckIn.id
+                                existingEntry.id
                             );
 
 
@@ -670,21 +746,24 @@ async function initDashboard() {
                 } else {
 
                     /* ================================
-                       CREATE NEW CHECK-IN
+                       CREATE NEW ENTRY
                     ================================= */
 
                     const result =
                         await supabase
 
-                            .from("check_ins")
+                            .from("mood_entries")
 
                             .insert({
 
-                                user_id: user.id,
+                                user_id:
+                                    user.id,
 
-                                level: selectedLevel,
+                                mood_score:
+                                    selectedLevel,
 
-                                date: date
+                                date:
+                                    date
 
                             });
 
@@ -706,12 +785,14 @@ async function initDashboard() {
                         saveError
                     );
 
+
                     if (checkinMessage) {
 
                         checkinMessage.textContent =
                             "Something went wrong. Please try again.";
 
                     }
+
 
                     saveButton.disabled = false;
 
@@ -771,6 +852,6 @@ async function initDashboard() {
 
 /* ================================
    START DASHBOARD
-================================ */
+================================= */
 
 initDashboard();
