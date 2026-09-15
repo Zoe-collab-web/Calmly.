@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input
-    type="password"
-    id="newPassword"
-    placeholder="New password"
->
 
-<button id="updatePassword">
-    Update password
-</button>
+    <title>Reset Password | Calmly</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <h1>Reset your password 💜</h1>
+
+        <p>
+            Enter a new password for your Calmly account.
+        </p>
+
+
+        <form id="resetPasswordForm">
+
+            <label for="newPassword">
+                New Password
+            </label>
+
+            <input
+                type="password"
+                id="newPassword"
+                placeholder="Enter your new password"
+                required
+                minlength="6"
+            >
+
+
+            <label for="confirmPassword">
+                Confirm Password
+            </label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm your new password"
+                required
+                minlength="6"
+            >
+
+
+            <button type="submit">
+                Update Password
+            </button>
+
+        </form>
+
+
+        <p id="resetMessage"></p>
+
+
+        <p>
+            Remembered your password?
+            <a href="login.html">Log in</a>
+        </p>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="reset.js">
+    </script>
+
 </body>
+
 </html>

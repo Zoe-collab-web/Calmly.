@@ -105,7 +105,7 @@ if (forgotPassword) {
                     email,
                     {
                         redirectTo:
-                            "https://calmly-nine.vercel.app/reset-password.html"
+                            "https://calmly-nine.vercel.app/reset.html"
                     }
                 );
 
