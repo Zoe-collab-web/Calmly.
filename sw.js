@@ -25,7 +25,10 @@ const FILES_TO_CACHE = [
     "./journal.js",
 
     "./supabase.js",
-    "./manifest.json"
+
+    "./manifest.json",
+    "./icon-192.png",
+    "./icon-512.png"
 ];
 
 
